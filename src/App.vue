@@ -25,9 +25,12 @@
 
   // hapus tugas
   function deleteTask(index) {
-    tasks.value.splice(index, 1)
-  }
-
+    if (tasks.value[index]) {
+    const deleted = tasks.value[index];
+    tasks.value.splice(index, 1);
+    alert(`Tugas "${deleted}" berhasil dihapus!`);
+    }
+  };
 
 </script>
 

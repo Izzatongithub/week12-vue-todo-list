@@ -1,38 +1,51 @@
-# todoVue_F1D02310114
+# Assignment: Vue.js – Simple To-Do List
 
-This template should help get you started developing with Vue 3 in Vite.
+## Identitas
+- Nama : Izzat Nazhiefa  
+- NIM  : F1D02310114  
 
-## Recommended IDE Setup
+---
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Deskripsi Tugas
+Pada tugas ini saya membuat aplikasi To-Do List sederhana menggunakan Vue.js.  
+Aplikasi ini memiliki fitur dasar yang umum dipakai pada aplikasi daftar tugas, seperti:
 
-## Recommended Browser Setup
+- Menambah tugas ke daftar  
+- Menghapus tugas tertentu  
+- Menampilkan daftar tugas secara dinamis  
+- Menampilkan pesan **“Tidak ada tugas”** jika daftar kosong  
+- Menggunakan konsep reaktivitas Vue dengan `ref()`  
+- Memanfaatkan event handling seperti `@submit.prevent` dan `@click`  
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+---
 
-## Customize configuration
+## Hasil
+### 1. Screenshot Hasil Program
+- Tampilan awal program sebelum tugas di tambahkan
+  <img width="1520" height="780" alt="image" src="https://github.com/user-attachments/assets/ff81b1df-d1c4-4350-b8f2-ca9ca70244cf" />
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- Tampilan setelah tugas ditambahkan dan list daftar tugas
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/93ce233b-de55-4229-9d86-079290ec8dde" />
 
-## Project Setup
+- Tampilan saat menghapus tugas
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d08bf6ce-3c23-46e4-951f-4abb8ffdb5f0" />
 
-```sh
-npm install
-```
 
-### Compile and Hot-Reload for Development
 
-```sh
-npm run dev
-```
+### 2. Penjelasan Singkat
+- **State Management:**  
+  Menggunakan `ref()` untuk menyimpan `tasks` (array) dan `newTask` (string input).
+  
+- **Menambah Tugas (`addTask()`):**  
+  Fungsi ini mengecek apakah input kosong, lalu memasukkan data ke array `tasks`.
 
-### Compile and Minify for Production
+- **Menampilkan Daftar:**  
+  Menggunakan `v-for="(task, index) in tasks"` dengan `:key="index"`.
 
-```sh
-npm run build
-```
+- **Menghapus Tugas:**  
+  Tombol hapus memanggil `deleteTask(index)` untuk menghapus item tertentu.
+
+- **Handling Jika Kosong:**  
+  Menggunakan `v-if="tasks.length === 0"` untuk menampilkan teks “Tidak ada tugas”.
+
+---
